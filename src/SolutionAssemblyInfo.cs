@@ -4,12 +4,12 @@ using System.Reflection;
 [assembly: AssemblyProductAttribute("ReactiveUI.Autofac")]
 [assembly: AssemblyCompanyAttribute("Alexey Zimarev")]
 [assembly: AssemblyCopyrightAttribute("Copyright � 2016 Alexey Zimarev")]
-[assembly: AssemblyVersionAttribute("0.1.0.0")]
-[assembly: AssemblyFileVersionAttribute("0.1.0.0")]
-[assembly: AssemblyInformationalVersionAttribute("0.1.0-unstable.2+Branch.develop.Sha.977cc85af2f77511804dd520380baf7d66cc2375")]
+[assembly: AssemblyVersionAttribute("6.5.1.0")]
+[assembly: AssemblyFileVersionAttribute("6.5.1.0")]
+[assembly: AssemblyInformationalVersionAttribute("6.5.1+1.Branch.master.Sha.93a38aa8000b1eb80e58f770afb1f2eba7a25fae")]
 namespace System {
     internal static class AssemblyVersionInformation {
-        internal const string Version = "0.1.0.0";
-        internal const string InformationalVersion = "0.1.0-unstable.2+Branch.develop.Sha.977cc85af2f77511804dd520380baf7d66cc2375";
+        internal const string Version = "6.5.1.0";
+        internal const string InformationalVersion = "6.5.1+1.Branch.master.Sha.93a38aa8000b1eb80e58f770afb1f2eba7a25fae";
     }
 }
