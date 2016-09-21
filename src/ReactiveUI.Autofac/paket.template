@@ -1,6 +1,6 @@
 ﻿type project
-authors
-	Alexey Zimarev
+authors Alexey Zimarev
+projectUrl https://github.com/alexeyzimarev/ReactiveUI.Autofac
 owners
 	alexey_zimarev
 description
