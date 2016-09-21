@@ -3,7 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{FD515BAE-7417-471D-9C1A-3BCB278E96FB}"
+	ProjectSection(SolutionItems) = preProject
+		..\paket.dependencies = ..\paket.dependencies
+	EndProjectSection
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactiveUI.Autofac", "ReactiveUI.Autofac\ReactiveUI.Autofac.csproj", "{D5EAB17E-9401-4A9C-9F46-274D65B26F40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactiveUI.Autofac.Tests", "ReactiveUI.Autofac.Tests\ReactiveUI.Autofac.Tests.csproj", "{8C54E4A7-695A-440B-81DD-BC6B99A2FC16}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".build", ".build", "{2C9A6109-6539-4FF3-8682-1315A9FC82A5}"
+	ProjectSection(SolutionItems) = preProject
+		..\build.fsx = ..\build.fsx
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +27,10 @@ Global
 		{D5EAB17E-9401-4A9C-9F46-274D65B26F40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5EAB17E-9401-4A9C-9F46-274D65B26F40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5EAB17E-9401-4A9C-9F46-274D65B26F40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C54E4A7-695A-440B-81DD-BC6B99A2FC16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C54E4A7-695A-440B-81DD-BC6B99A2FC16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C54E4A7-695A-440B-81DD-BC6B99A2FC16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C54E4A7-695A-440B-81DD-BC6B99A2FC16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ReactiveUI.Autofac</name>
+    </assembly>
+    <members>
+        <member name="T:ReactiveUI.Autofac.AutofacDependencyResolver">
+            <summary>
+            Autofac implementation for <see cref="T:Splat.IMutableDependencyResolver"/>
+            </summary>
+        </member>
+        <member name="T:ReactiveUI.Autofac.RegistrationExtensions">
+            <summary>
+            Registration extentions to register ReactiveUI-related components with Autofac.
+            </summary>
+        </member>
+        <member name="M:ReactiveUI.Autofac.RegistrationExtensions.RegisterViews(Autofac.ContainerBuilder,System.Reflection.Assembly[])">
+            <summary>
+            Register all types that implement generic interface IViewFor{T}
+            </summary>
+            <param name="builder">Container builder</param>
+            <param name="assemblies">Assemblies to be scanned</param>
+        </member>
+        <member name="M:ReactiveUI.Autofac.RegistrationExtensions.RegisterViewModels(Autofac.ContainerBuilder,System.Reflection.Assembly[])">
+            <summary>
+            Register all types that have "ViewModel" in their name
+            IScreen implementation is ignored since it must be registered as a singleton
+            <seealso cref="M:ReactiveUI.Autofac.RegistrationExtensions.RegisterScreen(Autofac.ContainerBuilder,System.Reflection.Assembly[])"/>
+            </summary>
+            <param name="builder">Container builder</param>
+            <param name="assemblies">Assemblies to be scanned</param>
+        </member>
+        <member name="M:ReactiveUI.Autofac.RegistrationExtensions.RegisterScreen(Autofac.ContainerBuilder,System.Reflection.Assembly[])">
+            <summary>
+            Register IScreen implementations as singletons.
+            Actually, you should only have one of those. We allow sending many assemblies to make <see cref="M:ReactiveUI.Autofac.RegistrationExtensions.RegisterForReactiveUI(Autofac.ContainerBuilder,System.Reflection.Assembly[])"/> to work.
+            </summary>
+            <param name="builder">Container builder</param>
+            <param name="assemblies">Assemblies to be scanned</param>
+        </member>
+        <member name="M:ReactiveUI.Autofac.RegistrationExtensions.RegisterForReactiveUI(Autofac.ContainerBuilder,System.Reflection.Assembly[])">
+            <summary>
+            Performs assembly scanning for views, view models and the screen.
+            View models are registered by convention and must have the "ViewName" in their class names.
+            You can call this method only to register all required components.
+            </summary>
+            <param name="builder">Container builder</param>
+            <param name="assemblies">Assemblies to be scanned</param>
+        </member>
+        <member name="T:ReactiveUI.Autofac.RxAppAutofacExtension">
+            <summary>
+            Extension methods for the Autofac adapter
+            </summary>
+        </member>
+        <member name="M:ReactiveUI.Autofac.RxAppAutofacExtension.UseAutofacDependencyResolver(Autofac.IContainer)">
+            <summary>
+            Build a container in your bootstrapper class and call this method to replace RxApp
+            internal resolver (Splat ServiceLocator) by Autofac
+            </summary>
+            <param name="container">Autofac container</param>
+        </member>
+    </members>
+</doc>

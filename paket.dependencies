@@ -1,0 +1,8 @@
+source https://www.nuget.org/api/v2/
+
+nuget reactiveui
+nuget Autofac
+nuget xunit
+nuget xunit.runner.console
+nuget Shouldly
+nuget FAKE

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<test-results name="Test results" date="2016-09-21" time="10:59:41" total="3" failures="0" not-run="0">
+  <test-suite name="xUnit.net Tests" success="True" time="0.574">
+    <results>
+      <test-suite name="C:\GitHub\ReactiveUI.Autofac\tests\ReactiveUI.Autofac.Tests.DLL" success="True" time="0.574">
+        <results>
+          <test-suite name="Test collection for ReactiveUI.Autofac.Tests.RegistrationTests" success="True" time="0.408">
+            <results>
+              <test-case name="ReactiveUI.Autofac.Tests.RegistrationTests.Should_resolve_views" executed="True" success="True" time="0.3968384" />
+              <test-case name="ReactiveUI.Autofac.Tests.RegistrationTests.Should_resolve_screen" executed="True" success="True" time="0.0068859" />
+              <test-case name="ReactiveUI.Autofac.Tests.RegistrationTests.Should_resolve_view_models" executed="True" success="True" time="0.0039358" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
