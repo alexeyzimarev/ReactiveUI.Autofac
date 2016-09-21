@@ -1,0 +1,8 @@
+﻿type project
+authors
+	Alexey Zimarev
+owners
+	alexey_zimarev
+description
+	Autofac adapter for ReactiveUI, including Splat dependency resolver and registration extensions.
+include-pdbs true
