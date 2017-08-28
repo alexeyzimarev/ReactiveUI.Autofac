@@ -23,6 +23,10 @@ namespace ReactiveUI.Autofac.Tests
             var viewB = Locator.CurrentMutable.GetService(typeof(IViewFor<ViewModelB>));
             viewB.ShouldNotBeNull();
             viewB.ShouldBeOfType<ViewB>();
+
+            var viewC = Locator.CurrentMutable.GetService(typeof(IViewFor<ViewModelC>), "Other");
+            viewC.ShouldNotBeNull();
+            viewC.ShouldBeOfType<ViewC>();
         }
 
         [Fact]
@@ -37,6 +41,9 @@ namespace ReactiveUI.Autofac.Tests
 
             var vmB = Locator.CurrentMutable.GetService<ViewModelB>();
             vmB.ShouldNotBeNull();
+
+            var vmC = Locator.CurrentMutable.GetService<ViewModelC>();
+            vmC.ShouldNotBeNull();
         }
 
         [Fact]

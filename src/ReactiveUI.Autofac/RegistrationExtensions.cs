@@ -1,6 +1,9 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Reflection;
 using Autofac;
+using Autofac.Core;
+
 // ReSharper disable MemberCanBePrivate.Global
 
 namespace ReactiveUI.Autofac
@@ -20,6 +23,22 @@ namespace ReactiveUI.Autofac
                 .Where(t => t.GetTypeInfo()
                     .ImplementedInterfaces.Any(
                         i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IViewFor<>)))
+                .As(t =>
+                {
+                    var contract =
+                        (Attribute.GetCustomAttribute(t, typeof(ViewContractAttribute)) as ViewContractAttribute)
+                        ?.Contract;
+                    if (contract != null)
+                    {
+                        var generic = t
+                            .FindInterfaces(
+                                (i, criteria) => i.IsGenericType &&
+                                                 i.GetGenericTypeDefinition() == typeof(IViewFor<>), null)
+                            .First();
+                        return new KeyedService(contract, generic);
+                    }
+                    return new TypedService(t);
+                })
                 .AsImplementedInterfaces();
 
 

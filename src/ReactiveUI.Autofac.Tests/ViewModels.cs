@@ -11,4 +11,10 @@
         public string UrlPathSegment { get; }
         public IScreen HostScreen { get; }
     }
+
+    public class ViewModelC : ReactiveObject, IRoutableViewModel
+    {
+        public string UrlPathSegment { get; }
+        public IScreen HostScreen { get; }
+    }
 }
